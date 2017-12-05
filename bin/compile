@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 echo "-----> Installing docker 17.09.0 from download.docker.com"
 cd $1
-mkdir -p vendor/docker
-cd vendor/docker
+mkdir -p vendor
+cd vendor
 curl -s -O https://download.docker.com/linux/static/stable/x86_64/docker-17.09.0-ce.tgz
 tar xzf docker-17.09.0-ce.tgz
+rm docker-17.09.0-ce.tgz
+dockerd
