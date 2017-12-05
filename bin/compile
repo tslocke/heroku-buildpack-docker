@@ -9,4 +9,4 @@ rm docker-17.09.0-ce.tgz
 mkdir -p docker/lib
 mkdir -p docker/run
 
-./docker/dockerd --data-root $1/docker/lib --exec-root $1/docker/run --pidfile $1/docker/run/docker.pid
+./docker/dockerd --data-root $1/docker/lib --exec-root $1/docker/run --pidfile $1/docker/run/docker.pid --containerd $1/docker/run/docker.sock
