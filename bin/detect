@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo "docker 17.09.0"
+exit 0
+
