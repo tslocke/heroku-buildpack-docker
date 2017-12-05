@@ -5,4 +5,8 @@ cd vendor
 curl -s -O https://download.docker.com/linux/static/stable/x86_64/docker-17.09.0-ce.tgz
 tar xzf docker-17.09.0-ce.tgz
 rm docker-17.09.0-ce.tgz
-./docker/dockerd --data-root $1/docker
+
+mkdir -p docker/lib
+mkdir -p docker/run
+
+./docker/dockerd --data-root $1/docker/lib --exec-root $1/docker/run --pidfile $1/docker/run/docker.pid
